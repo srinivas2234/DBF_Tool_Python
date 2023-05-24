@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1375</width>
+    <height>815</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit_cropstatus">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>490</y>
+      <width>241</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(228, 246, 255);</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>241</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 197, 250);</string>
+    </property>
+    <property name="title">
+     <string>Seed Sown Data</string>
+    </property>
+    <widget class="QRadioButton" name="radioButton_totalseed">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Total Seed</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_cropUNsown">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seed Unsown</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_cropSown">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Seed Sown</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Get_Data_pushButton">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Get Data</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_CropRegister">
+    <property name="geometry">
+     <rect>
+      <x>138</x>
+      <y>450</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CropRegister</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView_GetData">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>10</y>
+      <width>271</width>
+      <height>681</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_plot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>320</y>
+      <width>491</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="acceptDrops">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widgetCropDemand" native="true">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>451</width>
+      <height>311</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widgetSeed_Data_plot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>0</y>
+      <width>491</width>
+      <height>311</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widgetCurrentCropDemand" native="true">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>320</y>
+      <width>451</width>
+      <height>371</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_ResetDatabase">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>740</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reset Database</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>241</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(162, 255, 155);</string>
+    </property>
+    <property name="title">
+     <string>Market arrival data</string>
+    </property>
+    <widget class="QRadioButton" name="radioButton_AllCrops_Marketwise">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>All Crops Marketwise</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_All_Markets_Cropwise">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>All Markets Cropwise</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_marketArrival">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>141</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Get Market Arrival Data</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_market">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>50</y>
+       <width>109</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Karimnagar</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Shadnagar</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mahabubnagar</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kothagudem</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Siddipet</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Miryalaguda</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kamareddy</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ibrahimputnam</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jangaon</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Crop Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_CropType">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>109</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>All</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Select Market&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 241, 139);</string>
+    </property>
+    <property name="title">
+     <string>Crop Registration data</string>
+    </property>
+    <widget class="QLineEdit" name="lineEdit_Yield">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>100</y>
+       <width>109</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_To">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>44</y>
+       <width>109</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="date">
+      <date>
+       <year>2023</year>
+       <month>12</month>
+       <day>30</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>100</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Total Yield (Tons)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="dateEdit_From">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>44</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+     <property name="currentSectionIndex">
+      <number>0</number>
+     </property>
+     <property name="date">
+      <date>
+       <year>2023</year>
+       <month>2</month>
+       <day>1</day>
+      </date>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>19</y>
+       <width>100</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Market Arrival From</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>4</x>
+       <y>72</y>
+       <width>100</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Crop Reg. (Acres)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Acreage">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>72</y>
+       <width>109</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>19</y>
+       <width>109</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Market Arrival To</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton_GetLocation">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>450</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Get Location</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>241</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(175, 175, 255);</string>
+    </property>
+    <property name="title">
+     <string>Crop demand data</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_cropdemand">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>20</y>
+       <width>101</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Initial Demand</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cropwisedata">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>119</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Current Demand</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1375</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
